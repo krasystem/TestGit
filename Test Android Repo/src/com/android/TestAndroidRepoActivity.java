@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TestAndroidRepoActivity extends Activity {
     @Override
@@ -15,7 +16,7 @@ public class TestAndroidRepoActivity extends Activity {
         btn1.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				Toast.makeText(TestAndroidRepoActivity.this, "Welcome to Android", 0).show();
 				
 			}
 		});
