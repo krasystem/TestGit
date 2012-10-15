@@ -1,6 +1,8 @@
 package com.android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +18,14 @@ public class TestAndroidRepoActivity extends Activity {
         btn1.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				Toast.makeText(TestAndroidRepoActivity.this, "Welcome to Android", 0).show();
+				AlertDialog.Builder builder=new Builder(TestAndroidRepoActivity.this);
+				builder.setTitle("Alert");
+				builder.setMessage("This sample Git Hub Project");
+				builder.setNegativeButton("Ok", null);
+				
+				AlertDialog dialog=builder.create();
+				dialog.show();
+				
 				
 			}
 		});
